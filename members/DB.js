@@ -10,11 +10,7 @@ class DB {
     this.tables.set(tableName, columns);
   }
   getTable(tableName) {
-    if (this.tables.has(tableName)) {
-      return this.tables.get(tableName);
-    } else {
-      return null;
-    }
+    return this.tables.has(tableName) ? this.tables.get(tableName) : null;
   }
 }
 
