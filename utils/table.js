@@ -21,15 +21,14 @@ function isValidType(columns, intOrNumber = "int") {
 }
 
 function createColumns(columns, table) {
-  if (isValidType(columns)) {
-    const columnsMap = table;
-    for (const [key, value] of Object.entries(columns)) {
-      let array;
-      array = [];
-      columnsMap.set(`${value} ${key}`, array);
-    }
-    return columnsMap;
+  isValidType(columns);
+  const columnsMap = table;
+  for (const [key, value] of Object.entries(columns)) {
+    let array;
+    array = [];
+    columnsMap.set(`${value} ${key}`, array);
   }
+  return columnsMap;
 }
 
 function zip(...arr) {
