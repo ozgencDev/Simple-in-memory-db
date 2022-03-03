@@ -19,5 +19,5 @@ table.insertRecords({
   id: 3,
   name: "John",
 });
-console.log(table.getAllRecords());
-console.log(table.filterRecords({ name: "John" }));
+console.log(table.getAllRecords(), "GET ALL RECORDS");
+console.log(table.filterRecords({ name: "John", id: 2 }), "FILTER RECORDS");
